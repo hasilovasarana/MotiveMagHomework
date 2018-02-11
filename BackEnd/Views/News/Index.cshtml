@@ -1,0 +1,60 @@
+﻿@model IEnumerable<BackEnd.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.news_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_photo)
+            
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_date)
+        </th>       
+        <th>
+            @Html.DisplayNameFor(model => model.Category.category_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.news_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.news_text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.news_photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.news_date)
+        </td>
+     
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.category_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

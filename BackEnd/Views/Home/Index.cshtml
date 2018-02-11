@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Motive Mag a Entertainment Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Motive Mag Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/css/bootstrap-3.1.1.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom Theme files -->
+    <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/style.css" rel='stylesheet' type='text/css' />
+    <script src="~/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/move-top.js"></script>
+    <script type="text/javascript" src="~/js/easing.js"></script>
+    <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" media="screen" />
+    <!--/script-->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="header" id="home">
+        <div class="content white">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href='@Url.Action("Index","Home")'><h1>Motive<span> Mag</span></h1> </a>
+                    </div>
+                    <!--/.navbar-header-->
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href=@Url.Action("Index","Health")>Health</a></li>
+                            <li><a href=@Url.Action("Index","Sports")>Sports</a></li>
+                            <li>
+                                <a href=@Url.Action("Index","Entertainment")>Entertainment</a>
+                            </li>
+                            <li><a href=@Url.Action("Index","Weather")>Weather</a></li>
+                            <li><a href=@Url.Action("Index","Business")>Business</a></li>
+                        </ul>
+                    </div>
+                    <!--/.navbar-collapse-->
+                    <!--/.navbar-->
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <!--/start-banner-->
+    <div class="banner">
+        <div class="container">
+            <div class="banner-inner">
+                <div class="callbacks_container">
+                    <ul class="rslides callbacks callbacks1" id="slider4">
+                        <li class="callbacks1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out;">
+                            <div class="banner-info">
+                                <h3>WHAT IS LIKE TO WORK AS A SUPERMODEL ON WOMEN’S FASHION</h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </li>
+                        <li class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
+                            <div class="banner-info">
+                                <h3>FANTASTIC MAN MAGAZINE AND ITS INFLUENCE ON MEN’S FASHION</h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </li>
+                        <li class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
+                            <div class="banner-info">
+                                <h3>WHAT IS LIKE TO WORK AS A SUPERMODEL ON WOMEN’S FASHION</h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--banner-Slider-->
+                <script src="~/js/responsiveslides.min.js"></script>
+                <script>
+                    // You can also use "$(window).load(function() {"
+                    $(function () {
+                        // Slideshow 4
+                        $("#slider4").responsiveSlides({
+                            auto: true,
+                            pager: true,
+                            nav: false,
+                            speed: 500,
+                            namespace: "callbacks",
+                            before: function () {
+                                $('.events').append("<li>before event fired.</li>");
+                            },
+                            after: function () {
+                                $('.events').append("<li>after event fired.</li>");
+                            }
+                        });
+
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    @Html.Partial("TechnologyPartialView")
+
+
+
+
+    @Html.Partial("LatestArticlesPartialView");   
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                    containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+
+    </script>
+    <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+    <!--JS-->
+    <script type="text/javascript" src="~/js/bootstrap-3.1.1.min.js"></script>
+
+    <!--//JS-->
+
+
+
+</body>
+</html>
